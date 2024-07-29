@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Scientific Calculator Layout -->
+    <LinearLayout
+        android:id="@+id/scientific_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#34495e">
+
+        <TextView
+            android:id="@+id/scientific_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sin(25°)"
+            android:textSize="24sp"
+            android:textColor="#ffffff"
+            android:padding="16dp"
+            android:gravity="right" />
+
+        <TextView
+            android:id="@+id/scientific_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.4226182617"
+            android:textSize="36sp"
+            android:textColor="#ffffff"
+            android:padding="16dp"
+            android:gravity="right" />
+
+        <!-- Scientific Calculator Buttons -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="5"
+            android:padding="16dp">
+
+            <!-- Add scientific calculator buttons here -->
+
+        </GridLayout>
+    </LinearLayout>
+
+    <!-- Normal Calculator Layout -->
+    <LinearLayout
+        android:id="@+id/normal_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#e74c3c"
+        android:layout_below="@id/scientific_layout">
+
+        <TextView
+            android:id="@+id/normal_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 + 7"
+            android:textSize="24sp"
+            android:textColor="#ffffff"
+            android:padding="16dp"
+            android:gravity="right" />
+
+        <TextView
+            android:id="@+id/normal_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:textSize="36sp"
+            android:textColor="#ffffff"
+            android:padding="16dp"
+            android:gravity="right" />
+
+        <!-- Normal Calculator Buttons -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:padding="16dp">
+
+            <!-- Add normal calculator buttons here -->
+
+        </GridLayout>
+        <!-- Scientific Calculator Buttons -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="sin" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="cos" />
+
+        <!-- Add other scientific buttons similarly -->
+
+        <!-- Normal Calculator Buttons -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="2" />
+
+        <!-- Add other normal buttons similarly -->
+
+    </LinearLayout>
+
+</RelativeLayout>
