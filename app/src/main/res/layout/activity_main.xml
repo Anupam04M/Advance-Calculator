@@ -1,126 +1,508 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:weightSum="10"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
-    <!-- Scientific Calculator Layout -->
-    <LinearLayout
-        android:id="@+id/scientific_layout"
+    <TextView
+        android:id="@+id/tvsecs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#34495e">
+        android:layout_height="0dp"
+        android:background="000000"
+        android:text=" "
+        android:textSize="30sp"
+        android:textAlignment="viewEnd"
+        android:textColor="#f6f6f6"
+        android:padding="10dp"
+        android:gravity="bottom"
+        android:maxLines="1"
+        android:layout_weight="1"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:id="@+id/tvmain"
+        android:layout_width="match_parent"
+        android:background="#000000"
+        android:textColor="#fff"
+        android:text=" "
+        android:textSize="50sp"
+        android:padding="10dp"
+        android:gravity="bottom"
+        android:maxLines="1"
+        android:layout_weight="2"
+        android:layout_height="0dp"
+        tools:ignore="Suspicious0dp" />
 
-        <TextView
-            android:id="@+id/scientific_display"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="sin(25°)"
-            android:textSize="24sp"
-            android:textColor="#ffffff"
-            android:padding="16dp"
-            android:gravity="right" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="7">
 
-        <TextView
-            android:id="@+id/scientific_result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0.4226182617"
-            android:textSize="36sp"
-            android:textColor="#ffffff"
-            android:padding="16dp"
-            android:gravity="right" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-        <!-- Scientific Calculator Buttons -->
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="5"
-            android:padding="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
 
-            <!-- Add scientific calculator buttons here -->
+                    <Button
+                        android:id="@+id/aac"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000000"
+                        android:text="@string/ac"
+                        android:textAllCaps="false"
+                        android:textColor="#f6f6f6"
+                        android:textSize="30sp" />
 
-        </GridLayout>
+
+                    <Button
+                        android:id="@+id/ac"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="C"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/ab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text=" ("
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/ab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text=" )"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:weightSum="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/asin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="sin"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/acos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="cos"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/atan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="tan"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+
+                    <Button
+                        android:id="@+id/alog"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="log"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/alan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="ln"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/afact"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="x!"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/asquare"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="x²"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/asqrt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="√x"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/ainv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="÷"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/a7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="7"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/a8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="8"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/a9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="9"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/amul"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="×"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/a4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="4"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/a5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="5"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/a6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="6"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/amin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="-"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/a1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="1"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/a2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="2"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/a3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="3"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/aplus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="+"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/api"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="π"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/a0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="0"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/adot"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="."
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+
+
+                    <Button
+                        android:id="@+id/aequal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#000"
+                        android:text="="
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
     </LinearLayout>
 
-    <!-- Normal Calculator Layout -->
-    <LinearLayout
-        android:id="@+id/normal_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#e74c3c"
-        android:layout_below="@id/scientific_layout">
 
-        <TextView
-            android:id="@+id/normal_display"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1 + 7"
-            android:textSize="24sp"
-            android:textColor="#ffffff"
-            android:padding="16dp"
-            android:gravity="right" />
 
-        <TextView
-            android:id="@+id/normal_result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="8"
-            android:textSize="36sp"
-            android:textColor="#ffffff"
-            android:padding="16dp"
-            android:gravity="right" />
 
-        <!-- Normal Calculator Buttons -->
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="4"
-            android:padding="16dp">
-
-            <!-- Add normal calculator buttons here -->
-
-        </GridLayout>
-        <!-- Scientific Calculator Buttons -->
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:text="sin" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:text="cos" />
-
-        <!-- Add other scientific buttons similarly -->
-
-        <!-- Normal Calculator Buttons -->
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:text="1" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:text="2" />
-
-        <!-- Add other normal buttons similarly -->
-
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>

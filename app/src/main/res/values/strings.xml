@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Advance Calculator</string>
+    <string name="_23145">23145</string>
+    <string name="ac">AC</string>
 </resources>
